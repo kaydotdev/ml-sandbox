@@ -1,12 +1,10 @@
-import os
-
 import numpy as np
 import pandas as pd
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
-from tensorflow.keras import layers, models
 from setting.general import TRAIN_SET_PATH, TEST_SET_PATH, IMAGE_RESHAPING_FACTOR, KERNEL_PATH
+from infrastructure.model import build_model
 
 
 EPOCHS = 10
@@ -30,17 +28,7 @@ train_data = train_data.apply(lambda x: pd.Series([prepare_record(x / 255), prep
 test_data = pd.read_csv(TEST_SET_PATH)
 test_data = test_data.apply(lambda x: pd.Series([prepare_record(x / 255), prepare_output(x)], index=['input', 'output']), axis=1)
 
-model = models.Sequential()
-model.add(layers.Conv2D(IMAGE_RESHAPING_FACTOR, (3, 3), activation='softmax', input_shape=(IMAGE_RESHAPING_FACTOR, IMAGE_RESHAPING_FACTOR, 1)))
-model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(64, (3, 3), activation='softmax'))
-model.add(layers.MaxPooling2D((2, 2)))
-model.add(layers.Conv2D(64, (3, 3), activation='softmax'))
-
-model.add(layers.Flatten())
-model.add(layers.Dense(64, activation='softmax'))
-model.add(layers.Dense(10))
-
+model = build_model()
 model.summary()
 
 model.compile(optimizer='adam',
