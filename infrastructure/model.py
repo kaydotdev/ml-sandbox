@@ -25,7 +25,7 @@ def build_model():
     return model
 
 
-class Classification:
+class NeuralNetwork:
     __class_names__ = list(range(10))
 
     def __init__(self):
