@@ -1,0 +1,6 @@
+import os
+
+KERNEL_PATH = os.getenv('KERNEL_PATH')
+TRAIN_SET_PATH = os.getenv('TRAIN_SET_PATH')
+TEST_SET_PATH = os.getenv('TEST_SET_PATH')
+IMAGE_RESHAPING_FACTOR = os.getenv('IMAGE_RESHAPING_FACTOR')
