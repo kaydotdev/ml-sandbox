@@ -1,14 +1,14 @@
-# MNIST.UI
+# ML Sandbox
 
-![Documentation](https://img.shields.io/github/languages/code-size/antonAce/mnist-ui)
+![Documentation](https://img.shields.io/static/v1?label=TensorFlow&message=2.0.1&color=orange)
+![Documentation](https://img.shields.io/static/v1?label=PyQT5&message=5.14.2&color=orange)
+![Documentation](https://img.shields.io/static/v1?label=Pandas&message=1.0.3&color=orange)
+![Documentation](https://img.shields.io/static/v1?label=Matplotlib&message=3.2.1&color=orange)
+![Documentation](https://img.shields.io/static/v1?label=Pillow&message=7.1.1&color=orange)
+![Documentation](https://img.shields.io/static/v1?label=Numpy&message=1.18.2&color=orange)
 
-**"Hello, world!"** task in datascience
+Mastering skills in the **Machine learning** field!
 
-## Technologies stack
+## Application
 
-- TensorFlow *2.0.1*
-- PyQT5 *5.14.2*
-- Pandas *1.0.3*
-- Matplotlib *3.2.1*
-- Pillow *7.1.1*
-- Numpy *1.18.2*
+ - [MNIST Handwritten digits classifier](./mnist)
